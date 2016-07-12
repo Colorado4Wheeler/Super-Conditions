@@ -132,8 +132,8 @@
 			
 			<Field id="sep_ifelse" type="separator" />
 			
-						<Field type="menu" id="ifFail" defaultValue="none">
-				<Label>IF condition(s) Fail:</Label>
+			<Field type="menu" id="ifFail" defaultValue="none">
+				<Label>ELSE if condition(s) fail:</Label>
 				<List>
 					<Option value="none">Do Nothing</Option>
 					<Option value="device">Device</Option>
