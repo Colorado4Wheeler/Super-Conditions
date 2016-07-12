@@ -63,10 +63,20 @@ class conditions:
 		
 			self.parent.logger.debug("\tConditions returning true: %i, returning false: %i" % (isTrue, isFalse))
 		
-			if condition == "alltrue" and isFalse <> 0: return False
-			if condition == "anytrue" and isTrue == 0: return False
-			if condition == "allfalse" and isTrue <> 0: return False
-			if condition == "anyfalse" and isFalse == 0: return False
+			if condition == "alltrue" and isFalse <> 0: 
+				self.parent.logger.debug("\tCondition checking is for All True and there is a false value")
+				return False
+			if condition == "anytrue" and isTrue == 0: 
+				self.parent.logger.debug("\tCondition checking is for Any True and there are no true values")
+				return False
+			if condition == "allfalse" and isTrue <> 0: 
+				self.parent.logger.debug("\tCondition checking is for All False and there is a true value")
+				return False
+			if condition == "anyfalse" and isFalse == 0: 
+				self.parent.logger.debug("\tCondition checking is for Any False and there are no false values")
+				return False
+			
+			return True
 		
 		except Exception as e:
 			eps.printException(e) 
