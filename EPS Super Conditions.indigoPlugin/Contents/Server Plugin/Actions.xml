@@ -6,7 +6,7 @@
 	
 	<!-- All plugins that monitor other devices will have an update action uiPath="DeviceActions" -->
 	<Action id="condition">
-		<Name>Conditional Relay Control</Name>
+		<Name>Conditional</Name>
 		<CallbackMethod>onConditionAction</CallbackMethod>
 		<ConfigUI>
 			<SupportURL>http://www.perceptiveautomation.com/wiki/doku.php?id=plugins:example_dev_1</SupportURL>
