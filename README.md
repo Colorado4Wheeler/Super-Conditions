@@ -7,3 +7,7 @@ Super Conditions gives you another option within the Indigo system to create con
 
 For more information and documentation please visit http://forums.indigodomo.com/viewtopic.php?f=200&t=16449
 
+BETA Release Notes
+-----------------
+DATE - Beta 3
+* Removed Devices.xml since this plugin has no devices
