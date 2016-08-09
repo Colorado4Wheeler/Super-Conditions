@@ -13,6 +13,7 @@ import logging
 from lib.eps import eps
 from lib import ext
 from lib import dtutil
+from lib import iutil
 
 # Plugin libraries
 
@@ -28,7 +29,7 @@ eps = eps(None)
 class Plugin(indigo.PluginBase):
 
 	# Define the plugin-specific things our engine needs to know
-	TVERSION	= "3.1.0"
+	TVERSION	= "3.2.1"
 	PLUGIN_LIBS = ["cache", "conditions", "actions"]
 	UPDATE_URL 	= ""
 	
@@ -70,6 +71,13 @@ class Plugin(indigo.PluginBase):
 		
 		except Exception as e:
 			self.logger.error (ext.getException(e))	
+	
+	
+	################################################################################
+	# PLUGIN SPECIFIC ROUTINES
+	#
+	# Routines not raised by plug events that are specific to this plugin
+	################################################################################	
 	
 	
 	################################################################################

@@ -58,6 +58,12 @@
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
 			
+			<Field type="menu" id="serverActionPass" defaultValue="turnOn" visibleBindingId="ifPass" visibleBindingValue="server">
+				<Label>Action:</Label>
+				<List class="self" filter="#serveractions#[index=serverActionPass, allowui=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
 			
 			<!-- =========== ACTION CONFIGUI OPTIONS =========== -->
 			
@@ -114,6 +120,10 @@ Please see the event window for more information.</Label>
 					<Option value="menu">Menu</Option>
 					<Option value="list">List</Option>
 					<Option value="checkbox">Checkbox</Option>
+					<Option value="invtxt">Invisible text field</Option>
+					<Option value="invmnu">Invisible menu field</Option>
+					<Option value="invlst">Invisible list field</Option>
+					<Option value="invchk">Invisible checkbox field</Option>
 				</List>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
@@ -133,13 +143,13 @@ Please see the event window for more information.</Label>
 			
 			<Field type="menu" id="menuValuePass1" defaultValue="on" visibleBindingId="optionGroupPass1" visibleBindingValue="menu">
 				<Label>Value:</Label>
-				<List class="self" filter="#actionoptionlist#[index=menuValuePass1, group=1, method=Pass]" method="getCustomList" dynamicReload="true"/>
+				<List class="self" filter="#actionoptionlist#[group=1, method=Pass]" method="getCustomList" dynamicReload="true"/>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
 			
 			<Field type="list" id="listValuePass1" defaultValue="on" visibleBindingId="optionGroupPass1" visibleBindingValue="list">
 				<Label>Value:</Label>
-				<List class="self" filter="#actionoptionlist#[index=listValuePass1, group=1, method=Pass]" method="getCustomList" dynamicReload="true"/>
+				<List class="self" filter="#actionoptionlist#[group=1, method=Pass]" method="getCustomList" dynamicReload="true"/>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
 			
@@ -157,6 +167,10 @@ Please see the event window for more information.</Label>
 					<Option value="menu">Menu</Option>
 					<Option value="list">List</Option>
 					<Option value="checkbox">Checkbox</Option>
+					<Option value="invtxt">Invisible text field</Option>
+					<Option value="invmnu">Invisible menu field</Option>
+					<Option value="invlst">Invisible list field</Option>
+					<Option value="invchk">Invisible checkbox field</Option>
 				</List>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
@@ -176,13 +190,13 @@ Please see the event window for more information.</Label>
 			
 			<Field type="menu" id="menuValuePass2" defaultValue="on" visibleBindingId="optionGroupPass2" visibleBindingValue="menu">
 				<Label>Value:</Label>
-				<List class="self" filter="#actionoptionlist#[index=menuValuePass2, group=2, method=Pass]" method="getCustomList" dynamicReload="true"/>
+				<List class="self" filter="#actionoptionlist#[group=2, method=Pass]" method="getCustomList" dynamicReload="true"/>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
 			
 			<Field type="list" id="listValuePass2" defaultValue="on" visibleBindingId="optionGroupPass2" visibleBindingValue="list">
 				<Label>Value:</Label>
-				<List class="self" filter="#actionoptionlist#[index=listValuePass2, group=2, method=Pass]" method="getCustomList" dynamicReload="true"/>
+				<List class="self" filter="#actionoptionlist#[group=2, method=Pass]" method="getCustomList" dynamicReload="true"/>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
 			
@@ -199,6 +213,10 @@ Please see the event window for more information.</Label>
 					<Option value="menu">Menu</Option>
 					<Option value="list">List</Option>
 					<Option value="checkbox">Checkbox</Option>
+					<Option value="invtxt">Invisible text field</Option>
+					<Option value="invmnu">Invisible menu field</Option>
+					<Option value="invlst">Invisible list field</Option>
+					<Option value="invchk">Invisible checkbox field</Option>
 				</List>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
@@ -241,6 +259,10 @@ Please see the event window for more information.</Label>
 					<Option value="menu">Menu</Option>
 					<Option value="list">List</Option>
 					<Option value="checkbox">Checkbox</Option>
+					<Option value="invtxt">Invisible text field</Option>
+					<Option value="invmnu">Invisible menu field</Option>
+					<Option value="invlst">Invisible list field</Option>
+					<Option value="invchk">Invisible checkbox field</Option>
 				</List>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
@@ -283,6 +305,10 @@ Please see the event window for more information.</Label>
 					<Option value="menu">Menu</Option>
 					<Option value="list">List</Option>
 					<Option value="checkbox">Checkbox</Option>
+					<Option value="invtxt">Invisible text field</Option>
+					<Option value="invmnu">Invisible menu field</Option>
+					<Option value="invlst">Invisible list field</Option>
+					<Option value="invchk">Invisible checkbox field</Option>
 				</List>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
@@ -358,6 +384,12 @@ Please see the event window for more information.</Label>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
 			
+			<Field type="menu" id="serverActionFail" defaultValue="turnOn" visibleBindingId="ifPass" visibleBindingValue="server">
+				<Label>Action:</Label>
+				<List class="self" filter="#serveractions#[index=serverActionFail, allowui=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
 			<!-- =========== ACTION CONFIGUI OPTIONS =========== -->
 			
 			<Field type="checkbox" id="showWarningFail" defaultValue="false" hidden="true">
@@ -403,6 +435,10 @@ Please see the event window for more information.</Label>
 					<Option value="menu">Menu</Option>
 					<Option value="list">List</Option>
 					<Option value="checkbox">Checkbox</Option>
+					<Option value="invtxt">Invisible text field</Option>
+					<Option value="invmnu">Invisible menu field</Option>
+					<Option value="invlst">Invisible list field</Option>
+					<Option value="invchk">Invisible checkbox field</Option>
 				</List>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
@@ -445,6 +481,10 @@ Please see the event window for more information.</Label>
 					<Option value="menu">Menu</Option>
 					<Option value="list">List</Option>
 					<Option value="checkbox">Checkbox</Option>
+					<Option value="invtxt">Invisible text field</Option>
+					<Option value="invmnu">Invisible menu field</Option>
+					<Option value="invlst">Invisible list field</Option>
+					<Option value="invchk">Invisible checkbox field</Option>
 				</List>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
@@ -487,6 +527,10 @@ Please see the event window for more information.</Label>
 					<Option value="menu">Menu</Option>
 					<Option value="list">List</Option>
 					<Option value="checkbox">Checkbox</Option>
+					<Option value="invtxt">Invisible text field</Option>
+					<Option value="invmnu">Invisible menu field</Option>
+					<Option value="invlst">Invisible list field</Option>
+					<Option value="invchk">Invisible checkbox field</Option>
 				</List>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
@@ -529,6 +573,10 @@ Please see the event window for more information.</Label>
 					<Option value="menu">Menu</Option>
 					<Option value="list">List</Option>
 					<Option value="checkbox">Checkbox</Option>
+					<Option value="invtxt">Invisible text field</Option>
+					<Option value="invmnu">Invisible menu field</Option>
+					<Option value="invlst">Invisible list field</Option>
+					<Option value="invchk">Invisible checkbox field</Option>
 				</List>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
@@ -571,6 +619,10 @@ Please see the event window for more information.</Label>
 					<Option value="menu">Menu</Option>
 					<Option value="list">List</Option>
 					<Option value="checkbox">Checkbox</Option>
+					<Option value="invtxt">Invisible text field</Option>
+					<Option value="invmnu">Invisible menu field</Option>
+					<Option value="invlst">Invisible list field</Option>
+					<Option value="invchk">Invisible checkbox field</Option>
 				</List>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>
@@ -1076,6 +1128,705 @@ Please see the event window for more information.</Label>
 				<List class="self" filter="#times#[index=endTime2, showany=true, shownow=true, chunks=22]" method="getCustomList" dynamicReload="true"/>
 				<CallbackMethod>formFieldChanged</CallbackMethod>
 			</Field>								
+					
+			<!-- ***********       CONDITION 3      *********** -->
+			
+			<Field id="sep_condition3" type="separator" visibleBindingId="expandConditions3" visibleBindingValue="true"/>
+			
+			<Field type="checkbox" id="expandConditions3" defaultValue="false" visibleBindingId="conditions" visibleBindingValue="alltrue,allfalse,anytrue,anyfalse">
+				<Label> </Label>
+				<Description>Expand condition 3</Description>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>	
+			
+			<Field type="menu" id="condition3" defaultValue="" visibleBindingId="expandConditions3" visibleBindingValue="true">
+				<Label>Condition:</Label>
+				<List class="self" filter="#conditions_menu#" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasDevice3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the device field</Description>
+			</Field>
+			
+			<Field type="menu" id="device3" defaultValue="" visibleBindingId="hasDevice3" visibleBindingValue="true" >
+				<Label>Device:</Label>
+				<List class="indigo.devices"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasState3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the state field</Description>
+			</Field>
+			
+			<Field type="menu" id="state3" defaultValue="" visibleBindingId="hasState3" visibleBindingValue="true">
+				<Label>State:</Label>
+				<List class="self" filter="#devicestates#[index=state3, srcfield=device3, allowui=False]" method="getCustomList" dynamicReload="true"/>
+			</Field>
+			
+			<Field type="checkbox" id="hasProp3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the property field</Description>
+			</Field>
+			
+			<Field type="menu" id="property3" defaultValue="" visibleBindingId="hasProp3" visibleBindingValue="true">
+				<Label>Property:</Label>
+				<List class="self" filter="#devicevalues#[index=property3, srcfield=device3]" method="getCustomList" dynamicReload="true"/>
+			</Field>
+			
+			<Field type="checkbox" id="hasField3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the config props field</Description>
+			</Field>
+			
+			<Field type="menu" id="field3" defaultValue="" visibleBindingId="hasField3" visibleBindingValue="true">
+				<Label>Config fields:</Label>
+				<List class="self" filter="#devicefields#[index=field3, srcfield=device3, allowui=False]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasVariable3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the variable field</Description>
+			</Field>
+			
+			<Field type="menu" id="variable3" defaultValue="" visibleBindingId="hasVariable3" visibleBindingValue="true" >
+				<Label>Variable:</Label>
+				<List class="indigo.variables"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasPythonFormat3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the date format</Description>
+			</Field>	
+			
+			<Field id="dtFormat3" type="textfield" defaultValue="%Y-%m-%d %H:%M:%S" visibleBindingId="hasPythonFormat3" visibleBindingValue="true">
+				<Label>Python date format:</Label>
+			</Field>
+			
+			<Field type="menu" id="evaluation3" defaultValue="equal" visibleBindingId="condition3" visibleBindingValue="device,variable,datetime,dow,devstatedatetime,vardatetime,attributes,fields,devattribdatetime">
+				<Label>Is:</Label>
+				<List class="self" filter="#conditions_operators#[index=evaluation3]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			
+			<Field type="checkbox" id="hasStartValue3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the start value</Description>
+			</Field>	
+			
+			<!-- Future proofing in case we want to incorporate options -->
+			<Field type="checkbox" id="hasFieldOptions3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the additional options</Description>
+			</Field>
+			
+			<Field type="menu" id="fieldOptions3" defaultValue="" visibleBindingId="hasFieldOptions3" visibleBindingValue="true">
+				<Label>Value:</Label>
+				<List class="self" filter="#fieldoptions#[index=fieldOptions3, srcfield=field3]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasStateOptions3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the additional state options</Description>
+			</Field>
+			
+			<Field type="menu" id="stateOptions3" defaultValue="" visibleBindingId="hasStateOptions3" visibleBindingValue="true">
+				<Label>Value:</Label>
+				<List class="self" filter="#stateoptions#[index=stateOptions3, srcfield=state3]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasPropOptions3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the additional attribute/property options</Description>
+			</Field>
+			
+			<Field type="menu" id="propOptions3" defaultValue="" visibleBindingId="hasPropOptions3" visibleBindingValue="true">
+				<Label>Value:</Label>
+				<List class="self" filter="#stateoptions#[index=propOptions3, srcfield=property3]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			<!-- End future proofing -->		
+			
+			<Field id="value3" type="textfield" defaultValue="" visibleBindingId="hasStartValue3" visibleBindingValue="true">
+				<Label>Value:</Label>
+			</Field>
+			
+			<Field type="checkbox" id="hasStartDate3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the start date (month, day, year)</Description>
+			</Field>
+			
+			<Field type="menu" id="startYear3" defaultValue="3036" visibleBindingId="hasStartDate3" visibleBindingValue="true">
+				<Label>Year:</Label>
+				<List class="self" filter="#years#[index=startYear3, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="menu" id="startMonth3" defaultValue="05" visibleBindingId="hasStartDate3" visibleBindingValue="true">
+				<Label>Month:</Label>
+				<List class="self" filter="#months#[index=startMonth3, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="menu" id="startDay3" defaultValue="05" visibleBindingId="hasStartDate3" visibleBindingValue="true">
+				<Label>Day:</Label>
+				<List class="self" filter="#days#[index=startDay3, monthsrc=startMonth3, yearsrc=startYear3, showany=true, shownext=true, showlast=true, showcurrent=true, showlastday=true, showrepeats=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasStartDow3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the start day of the week</Description>
+			</Field>
+			
+			<Field type="menu" id="startDow3" defaultValue="0" visibleBindingId="hasStartDate3" visibleBindingValue="true">
+				<Label>Day of the week:</Label>
+				<List class="self" filter="#dows#[index=startDow3, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasStartTime3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end time</Description>
+			</Field>
+			
+			<Field type="menu" id="startTime3" defaultValue="08:00" visibleBindingId="hasStartTime3" visibleBindingValue="true">
+				<Label>Time:</Label>
+				<List class="self" filter="#times#[index=startTime3, showany=true, shownow=true, chunks=33]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasEndValue3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end value</Description>
+			</Field>
+			
+			<Field id="endValue3" type="textfield" defaultValue="" visibleBindingId="hasEndValue3" visibleBindingValue="true">
+				<Label>And:</Label>
+			</Field>
+			
+			<Field type="checkbox" id="hasEndDate3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end date (month, day, year)</Description>
+			</Field>
+			
+			<Field id="sep_endvalues3" type="label" visibleBindingId="hasEndDate3" visibleBindingValue="true">
+				<Label>                                               ____________________________________________________</Label>
+			</Field>
+			
+			<Field type="menu" id="endYear3" defaultValue="3036" visibleBindingId="hasEndDate3" visibleBindingValue="true">
+				<Label>End year:</Label>
+				<List class="self" filter="#years#[index=endYear3, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="menu" id="endMonth3" defaultValue="03" visibleBindingId="hasEndDate3" visibleBindingValue="true">
+				<Label>End month:</Label>
+				<List class="self" filter="#months#[index=endMonth3, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="menu" id="endDay3" defaultValue="35" visibleBindingId="hasEndDate3" visibleBindingValue="true">
+				<Label>End Day:</Label>
+				<List class="self" filter="#days#[index=endDay3, monthsrc=endMonth3, yearsrc=endYear3, showany=true, shownext=true, showlast=true, showcurrent=true, showlastday=true, showrepeats=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasEndDow3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end day of the week</Description>
+			</Field>
+			
+			<Field type="menu" id="endDow3" defaultValue="6" visibleBindingId="hasEndDate3" visibleBindingValue="true">
+				<Label>End day of week:</Label>
+				<List class="self" filter="#dows#[index=endDow3, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasEndTime3" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end time</Description>
+			</Field>
+			
+			<Field type="menu" id="endTime3" defaultValue="30:00" visibleBindingId="hasEndTime3" visibleBindingValue="true">
+				<Label>End time:</Label>
+				<List class="self" filter="#times#[index=endTime3, showany=true, shownow=true, chunks=33]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>								
+					
+			<!-- ***********       CONDITION 4      *********** -->
+			
+			<Field id="sep_condition4" type="separator" visibleBindingId="expandConditions4" visibleBindingValue="true"/>
+			
+			<Field type="checkbox" id="expandConditions4" defaultValue="false" visibleBindingId="conditions" visibleBindingValue="alltrue,allfalse,anytrue,anyfalse">
+				<Label> </Label>
+				<Description>Expand condition 4</Description>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>	
+			
+			<Field type="menu" id="condition4" defaultValue="" visibleBindingId="expandConditions4" visibleBindingValue="true">
+				<Label>Condition:</Label>
+				<List class="self" filter="#conditions_menu#" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasDevice4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the device field</Description>
+			</Field>
+			
+			<Field type="menu" id="device4" defaultValue="" visibleBindingId="hasDevice4" visibleBindingValue="true" >
+				<Label>Device:</Label>
+				<List class="indigo.devices"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasState4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the state field</Description>
+			</Field>
+			
+			<Field type="menu" id="state4" defaultValue="" visibleBindingId="hasState4" visibleBindingValue="true">
+				<Label>State:</Label>
+				<List class="self" filter="#devicestates#[index=state4, srcfield=device4, allowui=False]" method="getCustomList" dynamicReload="true"/>
+			</Field>
+			
+			<Field type="checkbox" id="hasProp4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the property field</Description>
+			</Field>
+			
+			<Field type="menu" id="property4" defaultValue="" visibleBindingId="hasProp4" visibleBindingValue="true">
+				<Label>Property:</Label>
+				<List class="self" filter="#devicevalues#[index=property4, srcfield=device4]" method="getCustomList" dynamicReload="true"/>
+			</Field>
+			
+			<Field type="checkbox" id="hasField4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the config props field</Description>
+			</Field>
+			
+			<Field type="menu" id="field4" defaultValue="" visibleBindingId="hasField4" visibleBindingValue="true">
+				<Label>Config fields:</Label>
+				<List class="self" filter="#devicefields#[index=field4, srcfield=device4, allowui=False]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasVariable4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the variable field</Description>
+			</Field>
+			
+			<Field type="menu" id="variable4" defaultValue="" visibleBindingId="hasVariable4" visibleBindingValue="true" >
+				<Label>Variable:</Label>
+				<List class="indigo.variables"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasPythonFormat4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the date format</Description>
+			</Field>	
+			
+			<Field id="dtFormat4" type="textfield" defaultValue="%Y-%m-%d %H:%M:%S" visibleBindingId="hasPythonFormat4" visibleBindingValue="true">
+				<Label>Python date format:</Label>
+			</Field>
+			
+			<Field type="menu" id="evaluation4" defaultValue="equal" visibleBindingId="condition4" visibleBindingValue="device,variable,datetime,dow,devstatedatetime,vardatetime,attributes,fields,devattribdatetime">
+				<Label>Is:</Label>
+				<List class="self" filter="#conditions_operators#[index=evaluation4]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			
+			<Field type="checkbox" id="hasStartValue4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the start value</Description>
+			</Field>	
+			
+			<!-- Future proofing in case we want to incorporate options -->
+			<Field type="checkbox" id="hasFieldOptions4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the additional options</Description>
+			</Field>
+			
+			<Field type="menu" id="fieldOptions4" defaultValue="" visibleBindingId="hasFieldOptions4" visibleBindingValue="true">
+				<Label>Value:</Label>
+				<List class="self" filter="#fieldoptions#[index=fieldOptions4, srcfield=field4]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasStateOptions4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the additional state options</Description>
+			</Field>
+			
+			<Field type="menu" id="stateOptions4" defaultValue="" visibleBindingId="hasStateOptions4" visibleBindingValue="true">
+				<Label>Value:</Label>
+				<List class="self" filter="#stateoptions#[index=stateOptions4, srcfield=state4]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasPropOptions4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the additional attribute/property options</Description>
+			</Field>
+			
+			<Field type="menu" id="propOptions4" defaultValue="" visibleBindingId="hasPropOptions4" visibleBindingValue="true">
+				<Label>Value:</Label>
+				<List class="self" filter="#stateoptions#[index=propOptions4, srcfield=property4]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			<!-- End future proofing -->		
+			
+			<Field id="value4" type="textfield" defaultValue="" visibleBindingId="hasStartValue4" visibleBindingValue="true">
+				<Label>Value:</Label>
+			</Field>
+			
+			<Field type="checkbox" id="hasStartDate4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the start date (month, day, year)</Description>
+			</Field>
+			
+			<Field type="menu" id="startYear4" defaultValue="4046" visibleBindingId="hasStartDate4" visibleBindingValue="true">
+				<Label>Year:</Label>
+				<List class="self" filter="#years#[index=startYear4, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="menu" id="startMonth4" defaultValue="05" visibleBindingId="hasStartDate4" visibleBindingValue="true">
+				<Label>Month:</Label>
+				<List class="self" filter="#months#[index=startMonth4, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="menu" id="startDay4" defaultValue="05" visibleBindingId="hasStartDate4" visibleBindingValue="true">
+				<Label>Day:</Label>
+				<List class="self" filter="#days#[index=startDay4, monthsrc=startMonth4, yearsrc=startYear4, showany=true, shownext=true, showlast=true, showcurrent=true, showlastday=true, showrepeats=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasStartDow4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the start day of the week</Description>
+			</Field>
+			
+			<Field type="menu" id="startDow4" defaultValue="0" visibleBindingId="hasStartDate4" visibleBindingValue="true">
+				<Label>Day of the week:</Label>
+				<List class="self" filter="#dows#[index=startDow4, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasStartTime4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end time</Description>
+			</Field>
+			
+			<Field type="menu" id="startTime4" defaultValue="08:00" visibleBindingId="hasStartTime4" visibleBindingValue="true">
+				<Label>Time:</Label>
+				<List class="self" filter="#times#[index=startTime4, showany=true, shownow=true, chunks=44]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasEndValue4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end value</Description>
+			</Field>
+			
+			<Field id="endValue4" type="textfield" defaultValue="" visibleBindingId="hasEndValue4" visibleBindingValue="true">
+				<Label>And:</Label>
+			</Field>
+			
+			<Field type="checkbox" id="hasEndDate4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end date (month, day, year)</Description>
+			</Field>
+			
+			<Field id="sep_endvalues4" type="label" visibleBindingId="hasEndDate4" visibleBindingValue="true">
+				<Label>                                               ____________________________________________________</Label>
+			</Field>
+			
+			<Field type="menu" id="endYear4" defaultValue="4046" visibleBindingId="hasEndDate4" visibleBindingValue="true">
+				<Label>End year:</Label>
+				<List class="self" filter="#years#[index=endYear4, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="menu" id="endMonth4" defaultValue="04" visibleBindingId="hasEndDate4" visibleBindingValue="true">
+				<Label>End month:</Label>
+				<List class="self" filter="#months#[index=endMonth4, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="menu" id="endDay4" defaultValue="45" visibleBindingId="hasEndDate4" visibleBindingValue="true">
+				<Label>End Day:</Label>
+				<List class="self" filter="#days#[index=endDay4, monthsrc=endMonth4, yearsrc=endYear4, showany=true, shownext=true, showlast=true, showcurrent=true, showlastday=true, showrepeats=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasEndDow4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end day of the week</Description>
+			</Field>
+			
+			<Field type="menu" id="endDow4" defaultValue="6" visibleBindingId="hasEndDate4" visibleBindingValue="true">
+				<Label>End day of week:</Label>
+				<List class="self" filter="#dows#[index=endDow4, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasEndTime4" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end time</Description>
+			</Field>
+			
+			<Field type="menu" id="endTime4" defaultValue="40:00" visibleBindingId="hasEndTime4" visibleBindingValue="true">
+				<Label>End time:</Label>
+				<List class="self" filter="#times#[index=endTime4, showany=true, shownow=true, chunks=44]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>								
+					
+			<!-- ***********       CONDITION 5      *********** -->
+			
+			<Field id="sep_condition5" type="separator" visibleBindingId="expandConditions5" visibleBindingValue="true"/>
+			
+			<Field type="checkbox" id="expandConditions5" defaultValue="false" visibleBindingId="conditions" visibleBindingValue="alltrue,allfalse,anytrue,anyfalse">
+				<Label> </Label>
+				<Description>Expand condition 5</Description>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>	
+			
+			<Field type="menu" id="condition5" defaultValue="" visibleBindingId="expandConditions5" visibleBindingValue="true">
+				<Label>Condition:</Label>
+				<List class="self" filter="#conditions_menu#" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasDevice5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the device field</Description>
+			</Field>
+			
+			<Field type="menu" id="device5" defaultValue="" visibleBindingId="hasDevice5" visibleBindingValue="true" >
+				<Label>Device:</Label>
+				<List class="indigo.devices"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasState5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the state field</Description>
+			</Field>
+			
+			<Field type="menu" id="state5" defaultValue="" visibleBindingId="hasState5" visibleBindingValue="true">
+				<Label>State:</Label>
+				<List class="self" filter="#devicestates#[index=state5, srcfield=device5, allowui=False]" method="getCustomList" dynamicReload="true"/>
+			</Field>
+			
+			<Field type="checkbox" id="hasProp5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the property field</Description>
+			</Field>
+			
+			<Field type="menu" id="property5" defaultValue="" visibleBindingId="hasProp5" visibleBindingValue="true">
+				<Label>Property:</Label>
+				<List class="self" filter="#devicevalues#[index=property5, srcfield=device5]" method="getCustomList" dynamicReload="true"/>
+			</Field>
+			
+			<Field type="checkbox" id="hasField5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the config props field</Description>
+			</Field>
+			
+			<Field type="menu" id="field5" defaultValue="" visibleBindingId="hasField5" visibleBindingValue="true">
+				<Label>Config fields:</Label>
+				<List class="self" filter="#devicefields#[index=field5, srcfield=device5, allowui=False]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasVariable5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the variable field</Description>
+			</Field>
+			
+			<Field type="menu" id="variable5" defaultValue="" visibleBindingId="hasVariable5" visibleBindingValue="true" >
+				<Label>Variable:</Label>
+				<List class="indigo.variables"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasPythonFormat5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the date format</Description>
+			</Field>	
+			
+			<Field id="dtFormat5" type="textfield" defaultValue="%Y-%m-%d %H:%M:%S" visibleBindingId="hasPythonFormat5" visibleBindingValue="true">
+				<Label>Python date format:</Label>
+			</Field>
+			
+			<Field type="menu" id="evaluation5" defaultValue="equal" visibleBindingId="condition5" visibleBindingValue="device,variable,datetime,dow,devstatedatetime,vardatetime,attributes,fields,devattribdatetime">
+				<Label>Is:</Label>
+				<List class="self" filter="#conditions_operators#[index=evaluation5]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			
+			<Field type="checkbox" id="hasStartValue5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the start value</Description>
+			</Field>	
+			
+			<!-- Future proofing in case we want to incorporate options -->
+			<Field type="checkbox" id="hasFieldOptions5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the additional options</Description>
+			</Field>
+			
+			<Field type="menu" id="fieldOptions5" defaultValue="" visibleBindingId="hasFieldOptions5" visibleBindingValue="true">
+				<Label>Value:</Label>
+				<List class="self" filter="#fieldoptions#[index=fieldOptions5, srcfield=field5]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasStateOptions5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the additional state options</Description>
+			</Field>
+			
+			<Field type="menu" id="stateOptions5" defaultValue="" visibleBindingId="hasStateOptions5" visibleBindingValue="true">
+				<Label>Value:</Label>
+				<List class="self" filter="#stateoptions#[index=stateOptions5, srcfield=state5]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasPropOptions5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the additional attribute/property options</Description>
+			</Field>
+			
+			<Field type="menu" id="propOptions5" defaultValue="" visibleBindingId="hasPropOptions5" visibleBindingValue="true">
+				<Label>Value:</Label>
+				<List class="self" filter="#stateoptions#[index=propOptions5, srcfield=property5]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			<!-- End future proofing -->		
+			
+			<Field id="value5" type="textfield" defaultValue="" visibleBindingId="hasStartValue5" visibleBindingValue="true">
+				<Label>Value:</Label>
+			</Field>
+			
+			<Field type="checkbox" id="hasStartDate5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the start date (month, day, year)</Description>
+			</Field>
+			
+			<Field type="menu" id="startYear5" defaultValue="5056" visibleBindingId="hasStartDate5" visibleBindingValue="true">
+				<Label>Year:</Label>
+				<List class="self" filter="#years#[index=startYear5, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="menu" id="startMonth5" defaultValue="05" visibleBindingId="hasStartDate5" visibleBindingValue="true">
+				<Label>Month:</Label>
+				<List class="self" filter="#months#[index=startMonth5, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="menu" id="startDay5" defaultValue="05" visibleBindingId="hasStartDate5" visibleBindingValue="true">
+				<Label>Day:</Label>
+				<List class="self" filter="#days#[index=startDay5, monthsrc=startMonth5, yearsrc=startYear5, showany=true, shownext=true, showlast=true, showcurrent=true, showlastday=true, showrepeats=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasStartDow5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the start day of the week</Description>
+			</Field>
+			
+			<Field type="menu" id="startDow5" defaultValue="0" visibleBindingId="hasStartDate5" visibleBindingValue="true">
+				<Label>Day of the week:</Label>
+				<List class="self" filter="#dows#[index=startDow5, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasStartTime5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end time</Description>
+			</Field>
+			
+			<Field type="menu" id="startTime5" defaultValue="08:00" visibleBindingId="hasStartTime5" visibleBindingValue="true">
+				<Label>Time:</Label>
+				<List class="self" filter="#times#[index=startTime5, showany=true, shownow=true, chunks=55]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasEndValue5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end value</Description>
+			</Field>
+			
+			<Field id="endValue5" type="textfield" defaultValue="" visibleBindingId="hasEndValue5" visibleBindingValue="true">
+				<Label>And:</Label>
+			</Field>
+			
+			<Field type="checkbox" id="hasEndDate5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end date (month, day, year)</Description>
+			</Field>
+			
+			<Field id="sep_endvalues5" type="label" visibleBindingId="hasEndDate5" visibleBindingValue="true">
+				<Label>                                               ____________________________________________________</Label>
+			</Field>
+			
+			<Field type="menu" id="endYear5" defaultValue="5056" visibleBindingId="hasEndDate5" visibleBindingValue="true">
+				<Label>End year:</Label>
+				<List class="self" filter="#years#[index=endYear5, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="menu" id="endMonth5" defaultValue="05" visibleBindingId="hasEndDate5" visibleBindingValue="true">
+				<Label>End month:</Label>
+				<List class="self" filter="#months#[index=endMonth5, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="menu" id="endDay5" defaultValue="55" visibleBindingId="hasEndDate5" visibleBindingValue="true">
+				<Label>End Day:</Label>
+				<List class="self" filter="#days#[index=endDay5, monthsrc=endMonth5, yearsrc=endYear5, showany=true, shownext=true, showlast=true, showcurrent=true, showlastday=true, showrepeats=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasEndDow5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end day of the week</Description>
+			</Field>
+			
+			<Field type="menu" id="endDow5" defaultValue="6" visibleBindingId="hasEndDate5" visibleBindingValue="true">
+				<Label>End day of week:</Label>
+				<List class="self" filter="#dows#[index=endDow5, showany=true, shownext=true, showlast=true, showcurrent=true]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>
+			
+			<Field type="checkbox" id="hasEndTime5" defaultValue="false" hidden="true">
+				<Label> </Label>
+				<Description>Show the end time</Description>
+			</Field>
+			
+			<Field type="menu" id="endTime5" defaultValue="50:00" visibleBindingId="hasEndTime5" visibleBindingValue="true">
+				<Label>End time:</Label>
+				<List class="self" filter="#times#[index=endTime5, showany=true, shownow=true, chunks=55]" method="getCustomList" dynamicReload="true"/>
+				<CallbackMethod>formFieldChanged</CallbackMethod>
+			</Field>								
+					
+
+
 						
 			
 			
