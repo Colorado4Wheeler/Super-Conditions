@@ -965,14 +965,14 @@ class ui:
 			allowUi = False
 			if ext.valueValid (args, "allowui", True): 
 				if args["allowui"].lower() == "true": allowUi = True
-			
+				
 			dev = indigo.devices[int(valuesDict[args["srcfield"]])]
 		
 			retList = []
 		
 			# If we have a plug cache then use that instead
 			if "plugcache" in dir(self.factory) and self.factory.plugcache is not None:
-				retList = self.factory.plugcache.getStateUIList (dev)
+				retList = self.factory.plugcache.getStateUIList (dev, allowUi)
 				return retList
 	
 			for stateName, stateValue in dev.states.iteritems():

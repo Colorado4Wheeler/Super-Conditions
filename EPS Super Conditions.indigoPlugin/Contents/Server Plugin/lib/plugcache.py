@@ -110,7 +110,7 @@ class plugcache:
 	#
 	# Get a list of states suitable for a list or menu UI field
 	#
-	def getStateUIList (self, obj):
+	def getStateUIList (self, obj, showUi = False):
 		ret = []
 		
 		try:
@@ -123,7 +123,7 @@ class plugcache:
 			if "xml" in plugInfo == False: return ret
 			if "devices" in plugInfo["xml"] == False: return ret
 										
-			ret = self._getStateUIList (obj, plugInfo, deviceTypeId)
+			ret = self._getStateUIList (obj, plugInfo, deviceTypeId, showUi)
 							
 		except Exception as e:
 			self.logger.error (ext.getException(e))	
@@ -133,7 +133,7 @@ class plugcache:
 	#
 	# Run the state list builder from getStateUIList
 	#
-	def _getStateUIList (self, obj, plugInfo, deviceTypeId):
+	def _getStateUIList (self, obj, plugInfo, deviceTypeId, showUi = False):
 		ret = []
 		statesfound = []
 
@@ -171,6 +171,10 @@ class plugcache:
 				
 				option = (state, self.factory.ui.resolveStateNameToString(state))
 				retadded.append(option)	
+				
+				if state + ".ui" in obj.states and showUi:
+					option = (state + ".ui", self.factory.ui.resolveStateNameToString(state) + " (UI Value)")
+					retadded.append(option)	
 				
 			if len(ret) > 0 and len(retadded) > 0:
 				option = ("-line-", self.factory.ui.getSeparator())
