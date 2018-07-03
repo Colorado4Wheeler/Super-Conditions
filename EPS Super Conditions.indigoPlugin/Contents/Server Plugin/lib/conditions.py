@@ -355,12 +355,22 @@ class conditions:
 					compareString = unicode(devEx.states[propsDict["state" + str(index)]])
 					self.logger.debug ("\tChecking if device state '%s' value of '%s' is less than '%s'" % (propsDict["state" + str(index)], compareString, propsDict["value" + str(index)]))
 					
-					if compareString.lower() < propsDict["value" + str(index)].lower():
-						val[0] = 1
-						val[1] = 0
-					else:
-						val[0] = 0
-						val[1] = 1
+					try:
+						if float(compareString) < float(propsDict["value" + str(index)]):
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
+											
+					except:	
+						self.logger.debug ("\tConverting to a number failed, comparing as strings")	
+						if compareString.lower() < propsDict["value" + str(index)].lower():
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
 						
 			if propsDict["condition" + str(index)] == "attributes":
 				val = [0, 0] # Failsafe
@@ -373,12 +383,22 @@ class conditions:
 				
 				self.logger.debug ("\tChecking if device attribute '%s' value of '%s' is less than '%s'" % (propsDict["property" + str(index)], compareString, propsDict["value" + str(index)]))
 				
-				if compareString.lower() < propsDict["value" + str(index)].lower():
-					val[0] = 1
-					val[1] = 0
-				else:
-					val[0] = 0
-					val[1] = 1
+				try:
+					if float(compareString) < float(propsDict["value" + str(index)]):
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
+										
+				except:
+					self.logger.debug ("\tConverting to a number failed, comparing as strings")	
+					if compareString.lower() < propsDict["value" + str(index)].lower():
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
 					
 			if propsDict["condition" + str(index)] == "fields":
 				val = [0, 0] # Failsafe
@@ -387,12 +407,22 @@ class conditions:
 					compareString = unicode(devEx.ownerProps[propsDict["field" + str(index)]])
 					self.logger.debug ("\tChecking if device configuration field '%s' value of '%s' is less than '%s'" % (propsDict["field" + str(index)], compareString, propsDict["value" + str(index)]))
 					
-					if compareString.lower() < propsDict["value" + str(index)].lower():
-						val[0] = 1
-						val[1] = 0
-					else:
-						val[0] = 0
-						val[1] = 1
+					try:
+						if float(compareString) < float(propsDict["value" + str(index)]):
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
+											
+					except:
+						self.logger.debug ("\tConverting to a number failed, comparing as strings")	
+						if compareString.lower() < propsDict["value" + str(index)].lower():
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
 						
 			if propsDict["condition" + str(index)] == "variable":
 				val = [0, 0] # Failsafe
@@ -400,12 +430,22 @@ class conditions:
 				compareString = unicode(var.value)
 				self.logger.debug ("\tChecking if variable '%s' value of '%s' is less than '%s'" % (var.name, compareString, propsDict["value" + str(index)]))
 									
-				if compareString.lower() < propsDict["value" + str(index)].lower():
-					val[0] = 1
-					val[1] = 0
-				else:
-					val[0] = 0
-					val[1] = 1
+				try:
+					if float(compareString) < float(propsDict["value" + str(index)]):
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
+										
+				except:
+					self.logger.debug ("\tConverting to a number failed, comparing as strings")	
+					if compareString.lower() < propsDict["value" + str(index)].lower():
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
 		
 			isTrue = isTrue + val[0]
 			isFalse = isFalse + val[1]			
@@ -438,12 +478,23 @@ class conditions:
 					compareString = unicode(devEx.states[propsDict["state" + str(index)]])
 					self.logger.debug ("\tChecking if device state '%s' value of '%s' is greater than '%s'" % (propsDict["state" + str(index)], compareString, propsDict["value" + str(index)]))
 					
-					if compareString.lower() > propsDict["value" + str(index)].lower():
-						val[0] = 1
-						val[1] = 0
-					else:
-						val[0] = 0
-						val[1] = 1
+					# Attempt to convert to floats in case we are comparing numbers (as strings they may produce false results)
+					try:
+						if float(compareString) > float(propsDict["value" + str(index)]):
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
+											
+					except:	
+						self.logger.debug ("\tConverting to a number failed, comparing as strings")				
+						if compareString.lower() > propsDict["value" + str(index)].lower():
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
 						
 			if propsDict["condition" + str(index)] == "attributes":
 				val = [0, 0] # Failsafe
@@ -456,12 +507,23 @@ class conditions:
 				
 				self.logger.debug ("\tChecking if device attribute '%s' value of '%s' is greater than '%s'" % (propsDict["property" + str(index)], compareString, propsDict["value" + str(index)]))
 				
-				if compareString.lower() > propsDict["value" + str(index)].lower():
-					val[0] = 1
-					val[1] = 0
-				else:
-					val[0] = 0
-					val[1] = 1
+				# Attempt to convert to floats in case we are comparing numbers (as strings they may produce false results)
+				try:
+					if float(compareString) > float(propsDict["value" + str(index)]):
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
+										
+				except:	
+					self.logger.debug ("\tConverting to a number failed, comparing as strings")	
+					if compareString.lower() > propsDict["value" + str(index)].lower():
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
 					
 			if propsDict["condition" + str(index)] == "fields":
 				val = [0, 0] # Failsafe
@@ -470,12 +532,23 @@ class conditions:
 					compareString = unicode(devEx.ownerProps[propsDict["field" + str(index)]])
 					self.logger.debug ("\tChecking if device configuration field '%s' value of '%s' is greater than '%s'" % (propsDict["field" + str(index)], compareString, propsDict["value" + str(index)]))
 					
-					if compareString.lower() > propsDict["value" + str(index)].lower():
-						val[0] = 1
-						val[1] = 0
-					else:
-						val[0] = 0
-						val[1] = 1			
+					# Attempt to convert to floats in case we are comparing numbers (as strings they may produce false results)
+					try:
+						if float(compareString) > float(propsDict["value" + str(index)]):
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
+											
+					except:	
+						self.logger.debug ("\tConverting to a number failed, comparing as strings")	
+						if compareString.lower() > propsDict["value" + str(index)].lower():
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1			
 			
 						
 			if propsDict["condition" + str(index)] == "variable":
@@ -483,14 +556,25 @@ class conditions:
 				var = indigo.variables[int(propsDict["variable" + str(index)])]
 				compareString = unicode(var.value)
 				self.logger.debug ("\tChecking if variable '%s' value of '%s' is greater than '%s'" % (var.name, compareString, propsDict["value" + str(index)]))
-									
-				if compareString.lower() > propsDict["value" + str(index)].lower():
-					val[0] = 1
-					val[1] = 0
-				else:
-					val[0] = 0
-					val[1] = 1
-		
+				
+				# Attempt to convert to floats in case we are comparing numbers (as strings they may produce false results)
+				try:
+					if float(compareString) > float(propsDict["value" + str(index)]):
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
+										
+				except:	
+					self.logger.debug ("\tConverting to a number failed, comparing as strings")				
+					if compareString.lower() > propsDict["value" + str(index)].lower():
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
+				
 			isTrue = isTrue + val[0]
 			isFalse = isFalse + val[1]			
 		
@@ -522,12 +606,22 @@ class conditions:
 					compareString = unicode(devEx.states[propsDict["state" + str(index)]])
 					self.logger.debug ("\tChecking if device state '%s' value of '%s' is equal to '%s'" % (propsDict["state" + str(index)], compareString, propsDict["value" + str(index)]))
 					
-					if compareString.lower() == propsDict["value" + str(index)].lower():
-						val[0] = 1
-						val[1] = 0
-					else:
-						val[0] = 0
-						val[1] = 1
+					try:
+						if float(compareString) == float(propsDict["value" + str(index)]):
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
+										
+					except:
+						self.logger.debug ("\tConverting to a number failed, comparing as strings")	
+						if compareString.lower() == propsDict["value" + str(index)].lower():
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
 						
 			if propsDict["condition" + str(index)] == "attributes":
 				val = [0, 0] # Failsafe
@@ -541,12 +635,22 @@ class conditions:
 				
 				self.logger.debug ("\tChecking if device attribute '%s' value of '%s' is equal to '%s'" % (propsDict["property" + str(index)], compareString, propsDict["value" + str(index)]))
 				
-				if compareString.lower() == propsDict["value" + str(index)].lower():
-					val[0] = 1
-					val[1] = 0
-				else:
-					val[0] = 0
-					val[1] = 1
+				try:
+					if float(compareString) == float(propsDict["value" + str(index)]):
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
+									
+				except:
+					self.logger.debug ("\tConverting to a number failed, comparing as strings")	
+					if compareString.lower() == propsDict["value" + str(index)].lower():
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
 					
 			if propsDict["condition" + str(index)] == "fields":
 				val = [0, 0] # Failsafe
@@ -555,25 +659,45 @@ class conditions:
 					compareString = unicode(devEx.ownerProps[propsDict["field" + str(index)]])
 					self.logger.debug ("\tChecking if device configuration field '%s' value of '%s' is equal to '%s'" % (propsDict["field" + str(index)], compareString, propsDict["value" + str(index)]))
 					
-					if compareString.lower() == propsDict["value" + str(index)].lower():
-						val[0] = 1
-						val[1] = 0
-					else:
-						val[0] = 0
-						val[1] = 1
+					try:
+						if float(compareString) == float(propsDict["value" + str(index)]):
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
+										
+					except:
+						self.logger.debug ("\tConverting to a number failed, comparing as strings")	
+						if compareString.lower() == propsDict["value" + str(index)].lower():
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
 						
 			if propsDict["condition" + str(index)] == "variable":
 				val = [0, 0] # Failsafe
 				var = indigo.variables[int(propsDict["variable" + str(index)])]
 				compareString = unicode(var.value)
 				self.logger.debug ("\tChecking if variable '%s' value of '%s' is equal to '%s'" % (var.name, compareString, propsDict["value" + str(index)]))
+				
+				try:
+					if float(compareString) == float(propsDict["value" + str(index)]):
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
 									
-				if compareString.lower() == propsDict["value" + str(index)].lower():
-					val[0] = 1
-					val[1] = 0
-				else:
-					val[0] = 0
-					val[1] = 1
+				except:
+					self.logger.debug ("\tConverting to a number failed, comparing as strings")						
+					if compareString.lower() == propsDict["value" + str(index)].lower():
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
 			
 			if propsDict["evaluation" + str(index)] == "equal":
 				isTrue = isTrue + val[0]
@@ -612,12 +736,22 @@ class conditions:
 					compareString = unicode(devEx.states[propsDict["state" + str(index)]])
 					self.logger.debug ("\tChecking if device state '%s' value of '%s' is between '%s' and '%s'" % (propsDict["state" + str(index)], compareString, propsDict["value" + str(index)], propsDict["endValue" + str(index)]))
 					
-					if compareString.lower() >= propsDict["value" + str(index)].lower() and compareString.lower() <= propsDict["endValue" + str(index)].lower():
-						val[0] = 1
-						val[1] = 0
-					else:
-						val[0] = 0
-						val[1] = 1
+					try:
+						if float(compareString) >= float(propsDict["value" + str(index)]) and float(compareString) <= float(propsDict["value" + str(index)]):
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
+										
+					except:
+						self.logger.debug ("\tConverting to a number failed, comparing as strings")						
+						if compareString.lower() >= propsDict["value" + str(index)].lower() and compareString.lower() <= propsDict["endValue" + str(index)].lower():
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
 						
 			if propsDict["condition" + str(index)] == "attributes":
 				val = [0, 0] # Failsafe
@@ -631,12 +765,22 @@ class conditions:
 				
 				self.logger.debug ("\tChecking if device attribute '%s' value of '%s' is between '%s' and '%s'" % (propsDict["property" + str(index)], compareString, propsDict["value" + str(index)], propsDict["endValue" + str(index)]))
 				
-				if compareString.lower() >= propsDict["value" + str(index)].lower() and compareString.lower() <= propsDict["endValue" + str(index)].lower():
-					val[0] = 1
-					val[1] = 0
-				else:
-					val[0] = 0
-					val[1] = 1
+				try:
+					if float(compareString) >= float(propsDict["value" + str(index)]) and float(compareString) <= float(propsDict["value" + str(index)]):
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
+									
+				except:
+					self.logger.debug ("\tConverting to a number failed, comparing as strings")		
+					if compareString.lower() >= propsDict["value" + str(index)].lower() and compareString.lower() <= propsDict["endValue" + str(index)].lower():
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
 					
 			if propsDict["condition" + str(index)] == "fields":
 				val = [0, 0] # Failsafe
@@ -645,25 +789,45 @@ class conditions:
 					compareString = unicode(devEx.ownerProps[propsDict["field" + str(index)]])
 					self.logger.debug ("\tChecking if device configuration field '%s' value of '%s' is between '%s' and '%s'" % (propsDict["field" + str(index)], compareString, propsDict["value" + str(index)], propsDict["endValue" + str(index)]))
 					
-					if compareString.lower() >= propsDict["value" + str(index)].lower() and compareString.lower() <= propsDict["endValue" + str(index)].lower():
-						val[0] = 1
-						val[1] = 0
-					else:
-						val[0] = 0
-						val[1] = 1
+					try:
+						if float(compareString) >= float(propsDict["value" + str(index)]) and float(compareString) <= float(propsDict["value" + str(index)]):
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
+										
+					except:
+						self.logger.debug ("\tConverting to a number failed, comparing as strings")		
+						if compareString.lower() >= propsDict["value" + str(index)].lower() and compareString.lower() <= propsDict["endValue" + str(index)].lower():
+							val[0] = 1
+							val[1] = 0
+						else:
+							val[0] = 0
+							val[1] = 1
 						
 			if propsDict["condition" + str(index)] == "variable":
 				val = [0, 0] # Failsafe
 				var = indigo.variables[int(propsDict["variable" + str(index)])]
 				compareString = unicode(var.value)
 				self.logger.debug ("\tChecking if variable '%s' value of '%s' is between '%s' and '%s'" % (var.name, compareString, propsDict["value" + str(index)], propsDict["endValue" + str(index)]))
+				
+				try:
+					if float(compareString) >= float(propsDict["value" + str(index)]) and float(compareString) <= float(propsDict["value" + str(index)]):
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
 									
-				if compareString.lower() >= propsDict["value" + str(index)].lower() and compareString.lower() <= propsDict["endValue" + str(index)].lower():
-					val[0] = 1
-					val[1] = 0
-				else:
-					val[0] = 0
-					val[1] = 1
+				except:
+					self.logger.debug ("\tConverting to a number failed, comparing as strings")							
+					if compareString.lower() >= propsDict["value" + str(index)].lower() and compareString.lower() <= propsDict["endValue" + str(index)].lower():
+						val[0] = 1
+						val[1] = 0
+					else:
+						val[0] = 0
+						val[1] = 1
 		
 			if propsDict["evaluation" + str(index)] == "between":
 				isTrue = isTrue + val[0]
